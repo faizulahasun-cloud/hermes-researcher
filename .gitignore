@@ -1,0 +1,62 @@
+# Hermes Profile Distribution — Official Exclusions (per docs)
+# https://hermes-agent.nousresearch.com/docs/user-guide/profile-distributions
+
+# Credentials & secrets
+.env
+auth.json
+.env.EXAMPLE
+
+# User data (never distribute)
+memories/
+sessions/
+state.db
+state.db-*
+*.lock
+logs/
+workspace/
+plans/
+home/
+*_cache/
+local/
+backups/
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Runtime caches
+cache/
+audio_cache/
+image_cache/
+nerve/
+hooks/
+pairing/
+platforms/
+plugin-update-checks/
+provider_models_cache.json
+projects.db*
+
+# Skins (user-specific)
+skins/
+
+# Curator state
+skills/.curator_backups/
+skills/.curator_ledger.jsonl
+skills/.curator_state
+skills/.hub/
+skills/.bundled_manifest
+
+# Cron runtime
+cron/executions.db
+cron/*.lock
+cron/ticker_*
+cron/output/
+
+# Plugin metadata
+plugins/.install-metadata.json
+
+# Submodules (reference only)
+plugins/homeassistant
+plugins/nerve
