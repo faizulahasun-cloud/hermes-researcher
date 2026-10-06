@@ -1,16 +1,16 @@
 {
   "daily-ai-briefing": {
     "schedule": "0 8 * * 1-5",
-    "prompt": "Search the web for latest AI/ML research from past 24 hours. Focus: LLM reasoning, agent frameworks, transformer improvements, open-weight models. Find 5+ recent papers/articles from: arXiv, major labs (Nous, Anthropic, Google, Meta), top conferences. Summarize top 3 most important with: clear headline, 2-sentence technical summary, source URL, confidence level (High/Med/Low), why it matters for practitioner. Format as clean briefing with 📌 emoji sections. End with story count. If <3 quality items, respond [SILENT].",
-    "skills": ["official/research/arxiv", "official/research/grounded-citations", "official/research/web-search"],
+    "prompt": "Search the web for important AI/ML research from the past 24 hours. Focus on LLM reasoning, agent frameworks, transformer improvements, and open-weight models. Prefer primary sources such as arXiv and major research labs. Select the three most important items, verify the source for each claim, and report a concise technical summary, source URL, confidence level, and why it matters. If fewer than three quality items are available, report only the verified items rather than padding the briefing.",
+    "skills": ["arxiv", "grounded-citations"],
     "deliver": "local",
-    "enabled": true
+    "enabled": false
   },
   "weekly-paper-digest": {
     "schedule": "0 9 * * 1",
-    "prompt": "Search arXiv for papers from past 7 days on: 1) 'language model reasoning' OR 'chain of thought' (cat:cs.CL OR cs.AI OR cs.LG), 2) 'agent framework' OR 'tool use' OR 'function calling' (cat:cs.AI OR cs.SE), 3) 'transformer efficiency' OR 'Mixture of Experts' OR 'attention optimization' (cat:cs.LG OR cs.CL). For each category, select top 3 by relevance. For each paper: create Obsidian note in 'Research/Papers/' with title, authors, arXiv ID, submission date, abstract summary (3-5 sentences), key contribution, methodology highlight, code availability (GitHub link if present). Use arxiv + obsidian skills. Deliver summary to local.",
-    "skills": ["official/research/arxiv", "official/note-taking/obsidian"],
+    "prompt": "Research notable arXiv papers from the past 7 days on language-model reasoning, agent/tool use, and transformer efficiency. Select up to three strong papers per category by relevance and evidence. For each paper record title, authors, arXiv ID, submission date, a concise abstract-based summary, key contribution, methodology highlight, and verified code link when available. Create Obsidian notes under Research/Papers/ only when the Obsidian skill is configured. Deliver a cited summary locally.",
+    "skills": ["arxiv", "grounded-citations", "obsidian"],
     "deliver": "local",
-    "enabled": true
+    "enabled": false
   }
 }
