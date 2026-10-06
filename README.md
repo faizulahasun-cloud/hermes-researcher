@@ -1,12 +1,15 @@
 # Researcher Profile Distribution
 
-Autonomous research assistant with:
-- **arXiv** — Search & retrieve academic papers
-- **Grounded Citations** — Perplexity-style inline citations with verification
-- **Web Search** — Exa/DuckDuckGo web research
-- **Obsidian** — Read/write/search Obsidian vault
-- **MCP Filesystem** — Local workspace access
-- **Cron Jobs** — Daily AI briefing, weekly paper digest
+Evidence-first Hermes specialist for academic and web research.
+
+## Responsibilities
+
+- Find and prioritize primary sources.
+- Search and inspect academic papers with Hermes' bundled `arxiv` skill.
+- Build verifiable citation ledgers with the bundled `grounded-citations` skill.
+- Use Hermes' built-in web tools for current web research.
+- Write research notes to Obsidian when the bundled `obsidian` skill is configured.
+- Hand off cited findings rather than pretending uncertain claims are established facts.
 
 ## Install
 
@@ -14,33 +17,27 @@ Autonomous research assistant with:
 hermes profile install github.com/faizulahasun-cloud/hermes-researcher --alias
 ```
 
-## Setup
+The distribution intentionally does **not** pin a paid model/provider or require an OpenRouter key. Select the desired free/local/cloud model after installation using normal Hermes profile configuration.
 
-```bash
-# 1. Fill in API keys
-cp .env.EXAMPLE .env
-# Edit .env with your keys
+It also intentionally does not ship a machine-specific filesystem MCP. Hermes already has native file/terminal capabilities, and bundled skills should remain owned and updated by Hermes.
 
-# 2. Configure Obsidian vault path (if using)
-# Edit mcp.json filesystem path if needed
+## Cron jobs
 
-# 3. Start
-researcher chat
-```
+Two optional jobs are included but ship **disabled** so installation cannot unexpectedly create recurring model usage:
 
-## Cron Jobs (installed paused)
+- `daily-ai-briefing` — weekdays at 08:00
+- `weekly-paper-digest` — Mondays at 09:00
 
-- `daily-ai-briefing` — Weekdays 08:00, local output
-- `weekly-paper-digest` — Monday 09:00, local output
+Review the prompts, delivery target, model/provider and local timezone before enabling them.
 
-Enable with: `researcher cron resume <job-id>`
+## Required installation verification
 
-## Skills
+After installation:
 
-Installed via `skills_install` in distribution.yaml:
-- `official/research/arxiv`
-- `official/research/grounded-citations`
-- `official/research/web-search`
-- `official/note-taking/obsidian`
+1. Confirm the alias/profile resolves correctly.
+2. Confirm `arxiv` and `grounded-citations` are available.
+3. Run one small research task requiring at least two primary sources.
+4. Verify the citations resolve to the claims they support.
+5. Test Obsidian separately only if an Obsidian vault is configured.
 
-These download from Skills Hub on first install.
+Do not mark this profile polished until those runtime checks pass on the target Hermes installation.
