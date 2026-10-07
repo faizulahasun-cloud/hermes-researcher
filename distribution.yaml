@@ -1,31 +1,15 @@
 name: researcher
-version: 1.0.0
-description: "Autonomous research assistant with arXiv, web search, grounded citations, and Obsidian integration"
-hermes_requires: ">=0.12.0"
-author: "Md Fizul Ahasun"
-license: "MIT"
-env_requires:
-  - name: OPENROUTER_API_KEY
-    description: "OpenRouter API key for model access"
-    required: true
-  - name: FIRECRAWL_API_KEY
-    description: "Firecrawl API key for web extraction (optional)"
-    required: false
-    default: ""
-  - name: SERPAPI_KEY
-    description: "SerpAPI key for web search (optional)"
-    required: false
-    default: ""
-skills_install:
-  - official/research/arxiv
-  - official/research/grounded-citations
-  - official/research/web-search
-  - official/note-taking/obsidian
+version: 1.1.0
+description: Evidence-first research specialist for web, academic, and 
+  source-grounded investigation
+hermes_requires: '>=0.12.0'
+author: Md Fizul Ahasun
+license: MIT
 distribution_owned:
   - SOUL.md
-  - config.yaml
-  - mcp.json
+  - profile.yaml
   - skills/
-  - cron/
-  - plugins/
+  - cron
   - distribution.yaml
+source: https://github.com/faizulahasun-cloud/hermes-researcher
+installed_at: '2026-10-06T14:02:45+00:00'
