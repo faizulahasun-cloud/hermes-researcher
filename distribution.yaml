@@ -1,6 +1,6 @@
 name: researcher
-version: 1.1.0
-description: "Evidence-first research specialist for web, academic, and source-grounded investigation"
+version: 1.2.0
+description: "Evidence-first research specialist with full skill suite: claim audit, deep research, literature sweep, source triage, web fallback, authority research, cite check, note taking, web search, probe knob"
 hermes_requires: ">=0.12.0"
 author: "Md Fizul Ahasun"
 license: "MIT"
