@@ -1,15 +1,19 @@
 name: researcher
 version: 1.1.0
-description: Evidence-first research specialist for web, academic, and 
-  source-grounded investigation
-hermes_requires: '>=0.12.0'
-author: Md Fizul Ahasun
-license: MIT
+description: "Evidence-first research specialist for web, academic, and source-grounded investigation"
+hermes_requires: ">=0.12.0"
+author: "Md Fizul Ahasun"
+license: "MIT"
+
+# No provider API key is required by the distribution itself.
+# Model/provider credentials remain user/profile deployment configuration.
+# Hermes bundled skills provide arxiv, grounded-citations, and Obsidian support.
+
 distribution_owned:
   - SOUL.md
   - profile.yaml
   - skills/
-  - cron
+  - cron/
   - distribution.yaml
 source: https://github.com/faizulahasun-cloud/hermes-researcher
 installed_at: '2026-10-06T14:02:45+00:00'
